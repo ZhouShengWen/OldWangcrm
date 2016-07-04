@@ -17,7 +17,7 @@
 
 	<div class="row-fluid">
 		<h1>老王房源管理系统</h1>
-		<form action='${pageContext.request.contextPath }/login' method="GET">
+		<form action='${pageContext.request.contextPath }/d' method="POST">
 			<p>
 				<label>帐&nbsp;&nbsp;&nbsp;号：<input type="text" id="uid" /></label>
 			</p>

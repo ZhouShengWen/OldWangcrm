@@ -22,7 +22,7 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/c", method = RequestMethod.POST)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome oldwanghome!", locale);
 
@@ -33,7 +33,7 @@ public class HomeController {
 
 		model.addAttribute("serverTime", formattedDate);
 
-		return "Index";
+		return "Login";
 	}
 
 	@RequestMapping(value = "/a", method = RequestMethod.GET)
@@ -48,5 +48,19 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate);
 
 		return "Template/find-2";
+	}
+	
+	@RequestMapping(value = "/d", method = RequestMethod.GET)
+	public String home2(Locale locale, Model model) {
+		logger.info("Welcome oldwanghome!", locale);
+
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+
+		String formattedDate = dateFormat.format(date);
+
+		model.addAttribute("serverTime", formattedDate);
+
+		return "Index";
 	}
 }

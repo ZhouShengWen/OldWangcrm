@@ -16,7 +16,7 @@ public class LandlordController {
 	@Autowired
 	private LandlordService landlordservice;
 
-	@RequestMapping(value = "/Landlord/addll", method = RequestMethod.GET)
+	@RequestMapping(value = "/Landlord/addll", method = RequestMethod.POST)
 	public String addLL(HttpServletRequest request, Landlord landlord) {
 		landlord.setName(request.getParameter("name"));
 		landlord.setPhone(request.getParameter("phone"));
